@@ -64,12 +64,12 @@ const imprimirDatosReserva = () => {
 
         const tableDataLastName = document.createElement("td");
         tableDataLastName.textContent = element.apellido;
-        tableRow.a(tableDataLastName);
-        document.getElementById("logIn__table-guestInfo").a(tableRow);
+        tableRow.appendChild(tableDataLastName);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataPhone = document.createElement("td");
         tableDataPhone.textContent = element.numeroDeContacto;
-        tableRow.a(tableDataPhone);
+        tableRow.appendChild(tableDataPhone);
         document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataMail = document.createElement("td");
@@ -97,11 +97,6 @@ const imprimirDatosReserva = () => {
         tableRow.appendChild(tableDataCP);
         document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
-        const tableDataFormaDePago = document.createElement("td");
-        tableDataFormaDePago.textContent = element.formaDePago;
-        tableRow.appendChild(tableDataFormaDePago);
-        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
-
         const tableDataDesignacionDeCabaña = document.createElement("td");
         tableDataDesignacionDeCabaña.textContent = element.designacionDeCabaña;
         tableRow.appendChild(tableDataDesignacionDeCabaña);
@@ -110,6 +105,11 @@ const imprimirDatosReserva = () => {
         const tableDataMontoEstadia = document.createElement("td");
         tableDataMontoEstadia.textContent = element.montoEstadia;
         tableRow.appendChild(tableDataMontoEstadia);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
+
+        const tableDataFormaDePago = document.createElement("td");
+        tableDataFormaDePago.textContent = element.formaDePago;
+        tableRow.appendChild(tableDataFormaDePago);
         document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataMontoEstadiaUSD = document.createElement("td");
