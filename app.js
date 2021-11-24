@@ -61,7 +61,7 @@ const resetFormDisponibilidad = () => {
 };
 
 const resetFormReserva = () => {
-    document.getElementById('form__reserva')
+    document.getElementById('form__reserva').reset();
 };
 
 // Función para extraer los datos del formulario DISPONIBILIDAD.
@@ -201,14 +201,24 @@ const dolarBlueFuncion = () => {
 // Función "formaDePago()" (Dependiendo de si se eligió pagar con tarjeta de crédito o con transferencia bancaria, el valor final de "formaDePago" será la opción elegida por el usuario).
 const formaDePagoFuncion = () => {
 
-    if (form__credit.checked == true) {
-        const formaDePago = document.getElementById("form__credit").value;
+    if (form__reserva-credit.checked == true) {
+        const formaDePago = document.getElementById("form__reserva-credit").value;
         return formaDePago;
-    } else if (form__wire.checked == true) {
-        const formaDePago = document.getElementById("form__wire").value;
+    } else if (form__reserva-wire.checked == true) {
+        const formaDePago = document.getElementById("form__reserva-wire").value;
         return formaDePago;
     }
 };
+
+// Función Shortcut Show (Si se elige pagar con tarjeta de crédito, aparecerá un nuevo "form" que mostrará las opciones de cantidad de cuotas sin interés que el huesped puede elegir para realizar su pago: 3, 6 y 12 cuotas).
+$("#form__reserva-credit").click (() => {
+    $(".form__credit-cuotas").show();
+});
+
+// Función Shortcut Hide (Si se elige como forma de pago transferencia bancaria, el "form" de cuotas se oculta).
+$("#form__reserva-wire").click (() => {
+    $(".form__credit-cuotas").hide();
+});
 
 // Guardar en Local Storage.
 // Función "guardarLocalStorageDisponibilidad()".
@@ -244,7 +254,6 @@ const guardarLocalStorageFormReserva = () => {
 
 
 
-
 // Botón ejecuta:
 // 1) "guardarLocalStorageDisponibilidad()".
 // 2) "resetFormDisponibilidad()".
@@ -255,9 +264,10 @@ document.getElementById('btn__availability').addEventListener('click', () => {gu
 // Botón ejecuta:
 // 1) "guardarLocalStoragePago()".
 // 2) "resetFormPago()".
-document.getElementById('btn__book-submit').addEventListener('click', () => {guardarLocalStorageFormReserva(), resetFormReserva()});
+window.addEventListener('DOMContentLoaded', document.getElementById('btn__book').addEventListener('click', () => {guardarLocalStorageFormReserva()}) )
+;
 
 // Botón ejecuta:
 // 1) "resetFormPago()".
-document.getElementById('btn__resetFormReserva').addEventListener('click', () => {resetFormReserva()});
+//document.getElementById('btn__resetFormReserva').addEventListener('click', () => {resetFormReserva()});
 
