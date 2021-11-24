@@ -261,18 +261,55 @@ $("#btn__availability").click (() => {
 });
 
 
+// CREAR ELEMENTOS / AGREGAR NODOS:
+// Función "mensajeFinal" (Si el total de alojados es inferior a 12 se mostrará el mensaje con el resúmen de la Disponibilidad, si es mayor a 12 se indicará que solo se pueden alojar hasta 12 personas).
+const mensajeDisponibilidad = () => {
+    let nombreCompleto              = document.getElementById("form__disponibilidad-name").value;
+    let totalAlojadosCalculado      = totalAlojadosFuncion();
+    let cantidadNoches              = +document.getElementById("form__disponibilidad-nights").value;
+    let designacionDeCabañaOtorgada = designacionDeCabañaFuncion();
+    let montoEstadia                = montoEstadiaFuncion();
+
+    // Creación de nuevo nodo con el método 'createElement()' especificando por parámetro la etiqueta 'div'.
+    const mensajeDeDisponibilidad = document.createElement("div");
+
+    // Menos de 13 alojados:
+    if (totalAlojadosCalculado < 13 == true) {
+        const mensajeD       = document.createElement("p");
+
+        mensajeD.textContent = `Hello ${nombreCompleto}! Welcome to "Cabañas Las Cañitas". We have some good news for you! Our cottage ${designacionDeCabañaOtorgada} is available for receiving ${totalAlojadosCalculado} guests. The total amount of your stay for ${cantidadNoches} nights is $${montoEstadia}. If you want to continue with payment, please click on "Continue Booking".`;
+
+        mensajeDeDisponibilidad.appendChild(mensajeD);
+
+        document.getElementById("availability__message1").appendChild(mensajeD);
+        return;
+
+    // Más de 12 alojados, reserva rechazada.
+    } else {
+        const superiorAdoce       = document.createElement("p");
+
+        superiorAdoce.textContent = `Hello ${nombreCompleto}! Welcome to "Cabañas Las Cañitas". We are sorry, we do not have cottages to accommodate more than 12 people`;
+
+        mensajeDeDisponibilidad.appendChild(superiorAdoce);
+
+        document.getElementById("availability__message1").appendChild(superiorAdoce);
+        return;
+    }
+};
+
+
 // EVENTOS CON JAVASCRIPT:
 // Botón ejecuta:
 // 1) "guardarLocalStorageDisponibilidad()".
 // 2) "mostrarSeccionDisponibilidad()".
 // 3) "mostrarMensajeDisponibilidad()".
-document.getElementById('btn__availability').addEventListener('click', () => {guardarLocalStorageFormDisponibilidad()});
+document.getElementById('btn__availability').addEventListener('click', () => {guardarLocalStorageFormDisponibilidad(), mensajeDisponibilidad()});
 
 // Botón ejecuta:
-// 1) "guardarLocalStoragePago()".
+// 1) "guardarLocalStorageReserva()".
 // 2) "resetFormPago()".
 document.getElementById('btn__book').addEventListener('click', () => {guardarLocalStorageFormReserva(), resetFormReserva()})
 
 // Botón ejecuta:
-// 1) "resetFormPago()".
+// 1) "resetFormReserva()".
 document.getElementById('btn__resetFormReserva').addEventListener('click', () => {resetFormReserva()});
