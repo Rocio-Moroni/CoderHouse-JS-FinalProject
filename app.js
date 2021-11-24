@@ -210,15 +210,23 @@ const formaDePagoFuncion = () => {
     }
 };
 
-// Función Shortcut Show (Si se elige pagar con tarjeta de crédito, aparecerá un nuevo "form" que mostrará las opciones de cantidad de cuotas sin interés que el huesped puede elegir para realizar su pago: 3, 6 y 12 cuotas).
+
+// EVENTOS CON JQUERY:
+// Método Shortcut CLICK y animación SHOW (Si se elige pagar con tarjeta de crédito, aparecerá un nuevo "form" que mostrará las opciones de cantidad de cuotas sin interés que el huesped puede elegir para realizar su pago: 3, 6 y 12 cuotas).
 $("#form__credit").click (() => {
     $(".form__credit-cuotas").show();
 });
 
-// Función Shortcut Hide (Si se elige como forma de pago transferencia bancaria, el "form" de cuotas se oculta).
+// Método Shortcut CLICK y animación HIDE (Si se elige como forma de pago transferencia bancaria, el "form" de cuotas se oculta).
 $("#form__wire").click (() => {
     $(".form__credit-cuotas").hide();
 });
+
+// Método Shortcut CLICK y animación SHOW (Al escuchar el evento se muestra un nuevo viewport, el cual está oculto desde el html con style = "display: none").
+$("#btn__availability").click (() => {
+    $("#availability__container").show();
+});
+
 
 // Guardar en Local Storage.
 // Función "guardarLocalStorageDisponibilidad()".
@@ -253,18 +261,16 @@ const guardarLocalStorageFormReserva = () => {
 
 
 
-
+// EVENTOS
 // Botón ejecuta:
 // 1) "guardarLocalStorageDisponibilidad()".
-// 2) "resetFormDisponibilidad()".
-// 3) "mostrarSeccionDisponibilidad()".
-// 4) "mostrarMensajeDisponibilidad()".
+// 2) "mostrarSeccionDisponibilidad()".
+// 3) "mostrarMensajeDisponibilidad()".
 document.getElementById('btn__availability').addEventListener('click', () => {guardarLocalStorageFormDisponibilidad()});
 
 // Botón ejecuta:
 // 1) "guardarLocalStoragePago()".
 // 2) "resetFormPago()".
-
 document.getElementById('btn__book').addEventListener('click', () => {guardarLocalStorageFormReserva(), resetFormReserva()})
 
 // Botón ejecuta:
