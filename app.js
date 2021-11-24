@@ -211,23 +211,6 @@ const formaDePagoFuncion = () => {
 };
 
 
-// EVENTOS CON JQUERY:
-// Método Shortcut CLICK y animación SHOW (Si se elige pagar con tarjeta de crédito, aparecerá un nuevo "form" que mostrará las opciones de cantidad de cuotas sin interés que el huesped puede elegir para realizar su pago: 3, 6 y 12 cuotas).
-$("#form__credit").click (() => {
-    $(".form__credit-cuotas").show();
-});
-
-// Método Shortcut CLICK y animación HIDE (Si se elige como forma de pago transferencia bancaria, el "form" de cuotas se oculta).
-$("#form__wire").click (() => {
-    $(".form__credit-cuotas").hide();
-});
-
-// Método Shortcut CLICK y animación SHOW (Al escuchar el evento se muestra un nuevo viewport, el cual está oculto desde el html con style = "display: none").
-$("#btn__availability").click (() => {
-    $("#availability__container").show();
-});
-
-
 // Guardar en Local Storage.
 // Función "guardarLocalStorageDisponibilidad()".
 const guardarLocalStorageFormDisponibilidad = () => {
@@ -258,10 +241,27 @@ const guardarLocalStorageFormReserva = () => {
 };
 
 
+// EVENTOS CON JQUERY:
+// Método Shortcut CLICK y animación SHOW:
+// Al escuchar el evento se muestra un nuevo form para realizar el pago con tarjeta de crédito, el cual está oculto desde el html con style = "display: none").
+$("#form__credit").click (() => {
+    $(".form__credit-div").show();
+});
+
+// Método Shortcut CLICK y animación HIDE:
+// Si se elige como forma de pago transferencia bancaria, el "form" de tarjeta de crédito se oculta.
+$("#form__wire").click (() => {
+    $(".form__credit-div").hide();
+});
+
+// Método Shortcut CLICK y animación SHOW:
+// Al escuchar el evento se muestra un nuevo viewport, el cual está oculto desde el html con style = "display: none".
+$("#btn__availability").click (() => {
+    $("#availability__container").show();
+});
 
 
-
-// EVENTOS
+// EVENTOS CON JAVASCRIPT:
 // Botón ejecuta:
 // 1) "guardarLocalStorageDisponibilidad()".
 // 2) "mostrarSeccionDisponibilidad()".
