@@ -1,0 +1,124 @@
+/* HEADER "HOME": BARRA DE NAVEGACION + IMAGEN DE FONDO (1er VIEWPORT) */
+
+header {
+    // Opacidad en img de fondo.
+    :before {
+        content:'';
+        position: absolute;
+            top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.002);
+        z-index: -1;
+    }
+    // Img de fondo.
+    .home__picture {
+        position: absolute;
+        background-image: url(..//..//multimedia/imagenes/home/home__picture.jpg);
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-size:cover;
+        background-position: 0% 50%;
+        z-index: -1;
+    }
+    // Barra de navegación.
+    .navbar, .home__navbar-left, .home__navbar-right {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding-top: 2.1%;
+
+        // Barra: laterales.
+        .home__navbar-left, .home__navbar-right {
+            width: 30%;
+            font-size: 0.9em;
+        }
+
+        // Barra: centro.
+        .home__navbar-center {
+            font-size: 1.5em;
+            text-align: center;
+
+            span p{
+                font-size: 0.4em;
+                padding-top: 3%;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }}
+    h1 {
+        color: white;
+        text-align: center;
+        padding-top: 10%;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        font-weight: 3;
+    }
+
+    // Formulario.
+    .form__quick {
+    display: flex;
+    justify-content: center;
+    padding-top: 30%;
+    }
+    .customField {
+        position: relative;
+        font-size: 14px;
+        padding-top: 20px;
+        margin-bottom: 5px;
+        input {
+            border: none;
+            -webkit-appearance: none;
+            -ms-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding: 10px;
+            border-radius: 3px;
+            width: 200px;
+            outline: none;
+            font-size: 14px;
+            background-color: whitesmoke;
+        }
+        .placeholder {
+            position: absolute;
+            z-index: 2;
+            left: 12px;
+            top: calc(50% + 10px);
+            transform: translateY(-50%);
+            color: #aaa;
+            transition:
+                top 0.3s ease,
+                color 0.3s ease,
+                font-size 0.3s ease;
+        }
+    }
+    // Animación placeholder.
+    .customField input:valid + .placeholder,
+    .customField input:focus + .placeholder {
+        top: 0px;
+        font-size: 10px;
+        color: white;
+    }
+    // Botón.
+    button {
+        background-color: black;
+        border: none;
+        border-radius: 3px;
+        width: 200px;
+        outline: none;
+        margin-left: 0.3%;
+        border: 1px solid white;
+        a {
+            font-family: 'Quicksand', sans-serif;
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 14px;
+        }
+    }
+}
+

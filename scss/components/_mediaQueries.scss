@@ -1,0 +1,56 @@
+
+// FOOTER
+.footer {
+    height: 30vh;
+    padding-top: 2.5%;
+
+    .footer__info, .footer__contact {
+        width: 25%;
+        margin-left: 2%;
+        p {
+            line-height: 25px;
+        }}
+    .footer__nav {
+        margin-left: 4%;
+        .footer__ul {
+            li {
+                margin-top: 4.5%;
+            }
+            a {
+                font-size: 0.8em;
+                margin-left: -35%;
+            }}}
+    .footer__media {
+        width: 32%;
+        margin-right: 1em;
+        h6 {
+            width: 100%;
+            text-align: right;
+        }
+        .footer__logos {
+            margin-top: 0%;
+            height: 40px;
+            width: 100%;
+            text-align: right;
+                img {
+                    margin-top: 0.5%;
+                }
+                a {
+                    margin: 0 1.5% 0 1.5%;
+                }
+        }
+        .footer__newsletter {
+            p {
+                margin-top: 0%;
+                margin-bottom: 0%;
+            }
+            input {
+                width: 78%;
+                height: 2em;
+            }
+            button {
+                margin-left: 3%;
+            }
+        }}
+}
+

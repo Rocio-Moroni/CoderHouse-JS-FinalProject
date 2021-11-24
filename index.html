@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- ESTILOS DE LETRAS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+    </style>
+
+    <!-- TITLE -->
+    <title>Las Cañitas Cottages: Holidays accommodation, cottages, experiences and unique spaces.</title>
+
+
+</head>
+
+<body>
+
+
+    <!-- HEADER COMIENZA (1° Viewport) -->
+    <header class="home__container">
+        <!-- Imagen de fondo -->
+        <div class="home__picture"></div>
+        <!-- Navbar -->
+        <ul class="navbar" id="home" href="index.html">
+            <div class="home__navbar-left">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cottages">Cottages</a></li>
+            </div>
+            <div class="home__navbar-center">
+                <li><a href="index.html">Las Cañitas <br> <span> <p>Valle de Calamuchita | Córdoba</p> </span></a></li>
+            </div>
+            <div class="home__navbar-right">
+                <li><a href="#our-services">Our services</a></li>
+                <li><a href="#book">Book Now</a></li>
+                <!-- LogIn para BackOffice -->
+                <li><a href="./backOffice/backOffice.html">Login</a></li>
+            </div>
+        </ul>
+        <!-- H1 Título -->
+        <h1>Welcome to <br> <b>Cottages Las Cañitas</b></h1>
+        <!-- Form para corroborar disponibilidad de cabañas -->
+        <div class="form__quick-container">
+            <div class="form__quick">
+                <form id="form__disponibilidad" action="">
+
+                    <label class="customField">
+                        <input type="text" id="form__disponibilidad-name" placeholder="&nbsp;" required>
+                        <span class="placeholder">Complete Name</span>
+                    </label>
+
+                    <label class="customField">
+                        <input type="number" id="form__disponibilidad-adults" placeholder="&nbsp;" required>
+                        <span class="placeholder">Amount of adults</span>
+                    </label>
+
+                    <label class="customField">
+                        <input type="number" id="form__disponibilidad-children" placeholder="&nbsp;" required>
+                        <span class="placeholder">Amount of children</span>
+                    </label>
+
+                    <label class="customField">
+                        <input type="number" id="form__disponibilidad-nights" placeholder="&nbsp;" required>
+                        <span class="placeholder">Amount of nights</span>
+                    </label>
+
+                </form>
+                <!-- Button para enviar Form -->
+                <button id="btn__availability" class="btn__availability"><a href="#availability__container">Check Availability</a></button>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER TERMINA -->
+
+
+    <!-- MAIN COMIENZA -->
+    <main>
+        <!-- Sección "AVAILABILITY" se mostrará únicamente al hacer click sobre el botón "btn__availability" -->
+        <section class="availability__container">
+            <!-- Mensajes insertados desde JS -->
+            <div id="availability__message1"></div>
+            <div id="availability__message2"></div>
+            <!-- Boton para continuar con reserva -->
+            <a id="button__continue-booking" href="#form__container">Continue Booking</a>
+            <!-- Imagen de fondo -->
+            <div id="availability__picture"></div>
+            <!-- Opacidad sobre imagen de fondo -->
+            <div id="availability__picture-opacity"></div>
+        </section>
+
+
+
+
+        <!-- Sección "BOOK NOW" empieza (2° Viewport)-->
+        <section class="book__container" id="book">
+            <!-- Borde CSS -->
+            <div class="form__container-border">
+                <!-- Fondo blanco CSS -->
+                <div class="form__container-white">
+                    <!-- Form: Inputs (izquierdo y derecho)-->
+                    <form id="form__reserva">
+                        <!-- Inputs: "Contact Information" (izquierdo) -->
+                        <div class="form__form--left-inputs">
+                            <h4>Contact Information</h4>
+                            <div class="form__row">
+                                <div class="col">
+                                    <label for="name">First Name</label>
+                                    <input type="text" name="" id="form__reserva-firstName" required="">
+                                </div>
+                                <div class="col">
+                                    <label for="name">Last Name</label>
+                                    <input type="text" name="" id="form__reserva-lastName" required="">
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="col">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" name="" id="form__reserva-phone" required="">
+                                </div>
+                                <div class="col">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="" id="form__reserva-email" required="">
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="col">
+                                    <label for="country">Country</label>
+                                    <input type="text" name="" id="form__reserva-country" required="">
+                                </div>
+                                <div class="col">
+                                    <label for="city">City</label>
+                                    <input type="city" name="" id="form__reserva-city" required="">
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="col">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="" id="form__reserva-address" required="">
+                                </div>
+                                <div class="col">
+                                    <label for="postalCode">Postal Code</label>
+                                    <input type="postalCode" name="" id="form__reserva-postalCode" required="">
+                                </div>
+                            </div>
+                            <div class="form__row">
+                                <div class="col">
+                                    <label for="message">Additional details and preferences</label>
+                                    <textarea name="message" id="form__message" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Inputs: "Payment Information" (derecho) -->
+                        <div class="form__form--right-inputs">
+                            <h4>Payment Information</h4>
+                            <div class="form__row">
+                                <div class="col">
+                                    <input type="radio" name="form__credit" id="form__reserva-credit" value="credit card" checked>
+                                    <label for="credit">Credit Card</label>
+                                    <input type="radio" name="form__wire" id="form__reserva-wire" value="
+                                    wire transfer" checked>
+                                    <label for="wireTransfer">Wire Transfer</label>
+                                </div>
+                            </div>
+                                <!-- Si se selecciona "Credit Card" se muestra el siguiente Form -->
+                                <div class="form__credit-div">
+                                    <div class="form__credit-cuotas">
+                                        <form class="form__credit" action="">
+                                            <input type="radio" name="radio__credit" id="tresPayments" value="3">
+                                            <label for="radio__credit">3 Payments</label>
+                                            <input type="radio" name="radio__credit" id="seisPayments" value="6">
+                                            <label for="radio__credit">6 Payments</label>
+                                            <input type="radio" name="radio__credit" id="docePayments" value="12">
+                                            <label for="radio__credit">12 Payments</label>
+                                        </form>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="col">
+                                            <label for="cardName">Name on Card</label>
+                                            <input type="text" name="" id="form__cardName" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="col">
+                                            <label for="cardNumber">Card Number</label>
+                                            <input type="text" name="" id="form__cardNumber" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="col">
+                                            <label for="cardExpiration">Expiration Date</label>
+                                            <div id="form__cardExpiration">
+                                                <input type="number" placeholder="MM" name="" required="">
+                                                <input type="number" placeholder="YY" name="" required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="col">
+                                            <label for="cardCvv">CVV</label>
+                                            <input type="number" name="" id="form__cardCvv" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="buttons">
+                                <div>
+                                    <input id="btn__resetFormReserva" type="reset" value="Delete data">
+                                    <button id="btn__book-submit" type="submit">Confirm booking</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    <!-- MAIN TERMINA -->
+    </main>
+
+
+    <!-- FOOTER COMIENZA -->
+    <footer class="footer__container footer">
+        <!-- Informacion descriptiva (Primer columna) -->
+        <div class="footer__info">
+            <div class="footer__cottages">
+                <h6>Las Cañitas Cottages</h6>
+            </div>
+            <p>We build brands and beautiful websites for clients who need a little help to create something truly
+                special. We do it with love in Argentina for clients all around the world and we can do it for you
+                too...</p>
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&COPY; Las Cañitas Cottages 2021 - All registered</p>
+            </div>
+        </div>
+        <!-- Footer Navbar (Segunda columna)-->
+        <div class="footer__nav">
+            <h6>Quick Links</h6>
+            <ul class="footer__ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cottages">Cottages</a></li>
+                <li><a href="#our-services">Our services</a></li>
+                <li><a href="#book">Book Now</a></li>
+            </ul>
+        </div>
+        <!-- Contacto y redes sociales -->
+        <div class="footer__contact">
+            <h6>Contact</h6>
+            <p class="footer__contact-us">
+                La Bodega 2703, Las Cañitas, Valle de Calamuchita, Córdoba, Argentina. <br>
+                las.cañitas@gmail.com
+                <br>
+                +54 11 3513404618<br>
+                +54 11 3597154982
+            </p>
+        </div>
+        <!-- Logos -->
+        <div class="footer__media">
+            <h6>Social Connect</h6>
+            <div class="footer__logos">
+                <a href="https://www.facebook.com/" target="_blank"><img src="./multimedia/logos/facebook.png"
+                        alt="Facebook Logo" width="20"></a>
+                <a href="https://tripadvisor.com/" target="_blank"><img src="./multimedia/logos/tripadvisor.png"
+                        alt="Tripadvisor Logo" width="20"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="./multimedia/logos/instagram.png"
+                        alt="Instagram Logo" width="20"></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><img src="./multimedia/logos/whatsapp.png"
+                        alt="Whatsapp Logo" width="20"></a>
+            </div>
+        <!-- Newsletter subscripción -->
+        <div class="footer__newsletter">
+            <p><span class="footer__span-newsletter">If you want to stay updated on the latest news, please fill out the form with your email adress and you will receive our</span> NEWSLETTER.</p>
+            <div class="newsletter">
+            <input type="email" name="newsletter" placeholder="Your email">
+            <button type="submit"><img src="submit button" alt=""><img src="./multimedia/logos/send.png" alt="Send button" width="35px"></button>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- FOOTER TERMINA-->
+
+<!-- LINKEO DE ARCHIVOS -->
+<script src="./libreria.js"></script>
+<script src="./app.js"></script>
+
+
+</body>
+
+
+</html>

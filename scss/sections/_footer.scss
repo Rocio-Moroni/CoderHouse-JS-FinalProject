@@ -1,0 +1,54 @@
+/* (STARTS) FOOTER */
+
+// Footer background
+footer {
+    background-image: linear-gradient(to top, rgb(82, 82, 82), black);
+    scroll-snap-align: start;
+    font-family: $quicksand;
+    color: white;
+    display: flex;
+
+    .footer__info, .footer__contact {
+        text-align: justify;
+        h6 {
+            font-size: $font__s;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 0.8em;
+        }}
+    .footer__nav {
+        h6 {
+            font-size: $font__s;
+            text-transform: uppercase;
+        }
+        .footer__ul {
+            list-style: none;
+            a {
+                text-decoration: none;
+                font-size: 0.8em;
+            }}}
+    .footer__media {
+        h6 {
+            font-size: $font__s;
+            text-transform: uppercase;
+            text-align: right;
+        }
+        .footer__newsletter {
+            p {
+                font-size: 0.8em;
+                text-align: justify;
+            }
+            input {
+                height: 2em;
+                .placeholder {
+                    text-align: center;
+            }}
+            ::-webkit-input-placeholder {
+                text-align: center;
+            }
+            button {
+                background-color: black;
+            }
+        }}
+}

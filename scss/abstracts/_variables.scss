@@ -1,0 +1,26 @@
+/* VARIABLES */
+
+// Font
+    //Family
+        // QuickSand
+        @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Quicksand:wght@300&display=swap');
+        $quicksand: 'Quicksand';
+    // Crushed
+        @import url('https://fonts.googleapis.com/css2?family=Crushed&family=Lobster+Two&display=swap');
+        $lobster: 'Crushed';
+//Size
+    $font__xs: 0.8em;
+    $font__s: 0.9em;
+    $font__m: 1em;
+    $font__l: 1.1em;
+    $font__xl: 1.8em;
+    $font__inputs: 14px;
+
+// Colors
+// Background Color
+    $bg-black: black;
+    $bg-white: white;
+
+// Text Color
+    $text-black: black;
+    $text-white: white;
