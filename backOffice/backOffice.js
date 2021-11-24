@@ -60,61 +60,61 @@ const imprimirDatosReserva = () => {
         const tableDataFirstName = document.createElement("td");
         tableDataFirstName.textContent = element.nombre;
         tableRow.appendChild(tableDataFirstName);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataLastName = document.createElement("td");
         tableDataLastName.textContent = element.apellido;
-        tableRow.appendChild(tableDataLastName);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        tableRow.a(tableDataLastName);
+        document.getElementById("logIn__table-guestInfo").a(tableRow);
 
         const tableDataPhone = document.createElement("td");
         tableDataPhone.textContent = element.numeroDeContacto;
-        tableRow.appendChild(tableDataPhone);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        tableRow.a(tableDataPhone);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataMail = document.createElement("td");
         tableDataMail.textContent = element.mail;
         tableRow.appendChild(tableDataMail);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataPais = document.createElement("td");
         tableDataPais.textContent = element.pais;
         tableRow.appendChild(tableDataPais);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataCiudad = document.createElement("td");
         tableDataCiudad.textContent = element.ciudad;
         tableRow.appendChild(tableDataCiudad);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataDireccion = document.createElement("td");
         tableDataDireccion.textContent = element.direccion;
         tableRow.appendChild(tableDataDireccion);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataCP = document.createElement("td");
         tableDataCP.textContent = element.cp;
         tableRow.appendChild(tableDataCP);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataFormaDePago = document.createElement("td");
         tableDataFormaDePago.textContent = element.formaDePago;
         tableRow.appendChild(tableDataFormaDePago);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataDesignacionDeCabaña = document.createElement("td");
         tableDataDesignacionDeCabaña.textContent = element.designacionDeCabaña;
         tableRow.appendChild(tableDataDesignacionDeCabaña);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataMontoEstadia = document.createElement("td");
         tableDataMontoEstadia.textContent = element.montoEstadia;
         tableRow.appendChild(tableDataMontoEstadia);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
 
         const tableDataMontoEstadiaUSD = document.createElement("td");
         tableDataMontoEstadiaUSD.textContent = element.montoEstadiaUSD;
         tableRow.appendChild(tableDataMontoEstadiaUSD);
-        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+        document.getElementById("logIn__table-guestInfo").appendChild(tableRow);
     })
 };
