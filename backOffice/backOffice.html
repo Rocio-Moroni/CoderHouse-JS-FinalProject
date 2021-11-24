@@ -9,57 +9,55 @@
 
 
 <body>
-    <!-- FORM for website´s owner ("USER & PASSWORD")-->
-    <form id="formBo" action="">
-        <input id="user" type="text" placeholder="User">
-        <input id="password" type="number" placeholder="Password">
-    </form>
 
-    <!-- BUTTON for user LOGIN -->
-    <button id="btnLogIn">Login</button>
+    <!-- Sección "LOGIN" empieza (1° Viewport)-->
+    <!-- Formulario de Login para propietario de la página web -->
+    <section class="login__container" id="login">
+        <form id="login__form" action="">
+            <label class="login__customField">
+                <input id="user" type="text" placeholder="&nbsp;" required>
+                <span class="placeholder">User Name</span>
+            </label>
+            <label class="login__customField">
+                <input id="password" type="password" placeholder="&nbsp;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <span class="placeholder">Password</span>
+            </label>
+        </form>
+        <!-- Botón para ingresar -->
+        <button id="btn__logIn" class="btn__logIn">Login</button>
+    </section>
 
-    <!-- TABLE printing host´s information -->
-    <table id="tableHostInfo">
-        <tr>
-            <td>N° &nbsp;</td>
-            <td>Name &nbsp;</td>
-            <td>Adults &nbsp;</td>
-            <td>Children &nbsp;</td>
-            <td>Nights &nbsp;</td>
-            <td>Cottage &nbsp;</td>
-            <td>Payment &nbsp;</td>
-            <td>Mail &nbsp;</td>
-        </tr>
-    </table>
 
-    <br>
-    <br>
-    <br>
+    <!-- Sección "TABLA" empieza (2° Viewport)-->
+    <!-- Impresión de Tabla con información de las Reservas realizadas -->
+    <section>
+        <table id="logIn__table-guestInfo">
+            <tr>
+                <td>N° &nbsp;</td>
+                <td>First Name &nbsp;</td>
+                <td>Last Name &nbsp;</td>
+                <td>Phone &nbsp;</td>
+                <td>Email &nbsp;</td>
+                <td>Country &nbsp;</td>
+                <td>City &nbsp;</td>
+                <td>Address &nbsp;</td>
+                <td>CP &nbsp;</td>
+                <td>Adults &nbsp;</td>
+                <td>Children &nbsp;</td>
+                <td>Nights &nbsp;</td>
+                <td>Cottage &nbsp;</td>
+                <td>Payment &nbsp;</td>
+                <td>Payment USD &nbsp;</td>
+            </tr>
+        </table>
+    </section>
 
-    <!-- FORM for searching a host through his name (NAME)-->
-    <form id="formSearch" action="">
-        <input id="hostNameSearch" type="text" placeholder="Host´s Name">
-    </form>
 
-    <!-- BUTTON for HOST NAME searching -->
-    <button id="btnSearch">Search</button>
+<!-- LINKEO DE ARCHIVOS -->
+<script src="./libreria.js"></script>
+<script src="./app.js"></script>
 
-    <!-- TABLE printing host´s searched through name information -->
-    <table id="tableSearch">
-        <tr>
-            <td>N° &nbsp;</td>
-            <td>Name &nbsp;</td>
-            <td>Adults &nbsp;</td>
-            <td>Children &nbsp;</td>
-            <td>Nights &nbsp;</td>
-            <td>Cottage &nbsp;</td>
-            <td>Payment &nbsp;</td>
-            <td>Mail &nbsp;</td>
-        </tr>
-    </table>
-
-    <!-- ENLACE a JavaScript -->
-    <script src="backOffice.js"></script>
 </body>
 
 

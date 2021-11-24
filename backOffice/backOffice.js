@@ -1,130 +1,120 @@
-let arrayDatosLocalMostrar;
+// Se desarrolla un nuevo HTML y JS para generar el acceso a usuarios específicos, quienes tendrán acceso a los los datos guardados en el Local Storage de cada reserva realizada.
 
-// ENTIDADES | FACTORY | ENTIDAD "USER".
-class User {
-    constructor(
-        user,
-        password
-    ){
-        this.user     = user;
-        this.password = password;
-    }
-}
+let arrayDatosReservaLSmostrar;
+
+// ENTIDAD "USUARIO".
+class Usuario {
+    constructor (usuario, contraseña) {
+        this.usuario     = usuario;
+        this.contraseña  = contraseña;
+    };
+};
 
 // Usuario y contraseña CORRECTA.
-const userLogin = new User (`rocio`, 2712);
-
+const usuarioLogin = new Usuario (`rocio`, 2712);
 
 // FUNCIONES:
+// Botón ejecuta "verificarLogin()".
+document.getElementById(`btn__logIn`).addEventListener(`click`, () => {verificarLogin(), resetLoginForm()});
 
-// BUTTON ejecuta "verificarLogin()".
-document.getElementById(`btnLogIn`).addEventListener(`click`, () => {verificarLogin(), resetForm()});
+// Función para resetear el formulario de LOGIN una vez realizado el ingreso.
+const resetFormLogin = () => {
+    document.getElementById('login__form').reset();
+};
 
-
-// FUNCTION "resetForm()". (Se elimina la información ingresada en los inputs dejando el formulario en blanco luego de apretar el botón "Login").
-const resetForm = () => {
-    document.getElementById(`formBo`).reset();
-}
-
-
-// FUNCTION "verificarLogin()". (Se verifica que los datos ingresados para Usuario y Contraseña sean correctos (`rocio`, 2712) de lo contrario se imprimirá "Usuario Incorrecto").
+// Función "verificarLogin()". Se verifica que los datos ingresados para Usuario y Contraseña sean correctos (`rocio`, 2712) de lo contrario se imprimirá en un alert "Usuario Incorrecto".
 const verificarLogin = () => {
-    usuario    = document.getElementById(`user`).value;
-    contraseña = Number(document.getElementById(`password`).value);
+    user    = document.getElementById(`user`).value;
+    password = Number(document.getElementById(`password`).value);
 
-        if ((usuario === `rocio`) && (contraseña === 2712)) {
-            imprimirDatos();
+        if ((user === `rocio`) && (password === 2712)) {
+            imprimirDatosReserva();
         } else {
             alert (`Usuario Incorrecto`)
         }
-}
+};
 
-
-// FUNCTION "extraerDatosLocalMostrar()".
-const extraerDatosLocalMostrar = () => {
-    if (JSON.parse(localStorage.getItem(`listaReservas`)) == null) {
+// Función para extraer los datos del formulario DISPONIBILIDAD.
+const extraerDatosReservaLSmostrar = () => {
+    if (JSON.parse(localStorage.getItem(`listaFormPago`)) == null) {
         alert (`No hay datos almacenados para mostrar`)
     } else {
-        arrayDatosLocalMostrar = JSON.parse(localStorage.getItem(`listaReservas`));
-        return arrayDatosLocalMostrar;
+        arrayDatosReservaLSmostrar = JSON.parse(localStorage.getItem(`listaFormPago`));
+        return arrayDatosReservaLSmostrar;
     }
-}
+};
 
+// CREAR ELEMENTOS / AGREGAR NODOS:
+// Función "imprimirDatosReservas" Si los datos del usuario y la contraseña fueron ingresados correctamente, se imprimen los datos de las reservas realizadas almacenadas en el Local Storage.
+const imprimirDatosReserva = () => {
 
-// FUNCTION "imprimirDatos()". Si el usuario es correcto se imprimen los datos con esta function.
-const imprimirDatos = () => {
     let indice = 0;
-    extraerDatosLocalMostrar().forEach(element => {
-    indice += 1;
+    extraerDatosReservaLSmostrar().forEach(element => {
+        indice += 1;
+        const tableRow = document.createElement("tr");
 
-    document.getElementById(`tableHostInfo`).innerHTML += `
-    <tr>
-        <td>${indice}</td>
-        <td>${element.nombre}</td>
-        <td>${element.cantidadAdultos}</td>
-        <td>${element.cantidadMenores}</td>
-        <td>${element.cantidadNoches}</td>
-        <td>${element.designacionDeCabaña}</td>
-        <td>${element.formaDePago}</td>
-        <td>${element.mail}</td>
-    </tr>
-    `
+        const tableDataIndice       = document.createElement("td");
+        tableDataIndice.textContent = indice;
+        tableRow.appendChild(tableDataIndice);
+
+        const tableDataFirstName = document.createElement("td");
+        tableDataFirstName.textContent = element.nombre;
+        tableRow.appendChild(tableDataFirstName);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataLastName = document.createElement("td");
+        tableDataLastName.textContent = element.apellido;
+        tableRow.appendChild(tableDataLastName);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataPhone = document.createElement("td");
+        tableDataPhone.textContent = element.numeroDeContacto;
+        tableRow.appendChild(tableDataPhone);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataMail = document.createElement("td");
+        tableDataMail.textContent = element.mail;
+        tableRow.appendChild(tableDataMail);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataPais = document.createElement("td");
+        tableDataPais.textContent = element.pais;
+        tableRow.appendChild(tableDataPais);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataCiudad = document.createElement("td");
+        tableDataCiudad.textContent = element.ciudad;
+        tableRow.appendChild(tableDataCiudad);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataDireccion = document.createElement("td");
+        tableDataDireccion.textContent = element.direccion;
+        tableRow.appendChild(tableDataDireccion);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataCP = document.createElement("td");
+        tableDataCP.textContent = element.cp;
+        tableRow.appendChild(tableDataCP);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataFormaDePago = document.createElement("td");
+        tableDataFormaDePago.textContent = element.formaDePago;
+        tableRow.appendChild(tableDataFormaDePago);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataDesignacionDeCabaña = document.createElement("td");
+        tableDataDesignacionDeCabaña.textContent = element.designacionDeCabaña;
+        tableRow.appendChild(tableDataDesignacionDeCabaña);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataMontoEstadia = document.createElement("td");
+        tableDataMontoEstadia.textContent = element.montoEstadia;
+        tableRow.appendChild(tableDataMontoEstadia);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
+
+        const tableDataMontoEstadiaUSD = document.createElement("td");
+        tableDataMontoEstadiaUSD.textContent = element.montoEstadiaUSD;
+        tableRow.appendChild(tableDataMontoEstadiaUSD);
+        document.getElementById("logIn__table-guestInfo").appendchild(tableRow);
     })
-}
-
-
-
-// BUSCADOR //
-const guardarValorBuscado = () => {
-    let valorBuscado = document.getElementById(`hostNameSearch`).value;
-    return valorBuscado;
-}
-
-
-// BUTTON ejecuta "guardarValorBuscado()".
-document.getElementById(`btnSearch`).addEventListener(`click`, () => {guardarValorBuscado(), imprimirDatosBuscador})
-
-
-// FUNCTION "buscadorNombre()". (A través de un buscador se puede ingresar el nombre de un alojado en particular y se imprimán sus datos).
-const buscadorNombre = () => {
-    let busqueda = "";
-    let nombre = document.getElementById(`nombre`);
-    
-    //////////////////////
-    // if {
-    //     nombre 
-    // }
-
-    let arrayBuscado = extraerDatosLocalMostrar().filter(element => element.nombre = guardarValorBuscado());
-    return arrayBuscado;
-}
-
-const imprimirDatosBuscador = () => {
-    let indice = 0;
-    extraerDatosLocalMostrar().forEach(element => {
-    indice += 1;
-
-    document.getElementById(`tableSearch`).innerHTML += `
-    <tr>
-        <td>${indice}</td>
-        <td>${element.nombre}</td>
-        <td>${element.cantidadAdultos}</td>
-        <td>${element.cantidadMenores}</td>
-        <td>${element.cantidadNoches}</td>
-        <td>${element.designacionDeCabaña}</td>
-        <td>${element.formaDePago}</td>
-        <td>${element.mail}</td>
-    </tr>
-    `
-    })
-}
-
-
-// BUTTON ejecuta "resetFormSearch()".
-document.getElementById(`btnSearch`).addEventListener(`click`, () => {resetFormSearch()});
-
-
-// FUNCTION "resetFormSearch()". (Se elimina la información ingresada en los inputs dejando el formulario en blanco luego de apretar el botón "Search").
-const resetFormSearch = () => {
-    document.getElementById(`formSearch`).reset();
-}
+};
