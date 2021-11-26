@@ -298,6 +298,101 @@ header button a {
   font-size: 14px;
 }
 
+h2 {
+  text-align: center;
+  padding-top: 5%;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 3;
+}
+
+.form__reserva {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+.form__reserva h4 {
+  font-size: 1.1em;
+}
+.form__reserva .form__form--left-inputs {
+  width: 50%;
+  margin-left: 10%;
+}
+.form__reserva .form__form--right-inputs {
+  width: 50%;
+  margin-left: 5%;
+}
+.form__reserva .form__form--right-inputs .placeholder {
+  color: black;
+  display: flex;
+  background-color: blue;
+}
+.form__reserva .form__form--right-inputs .payForm {
+  display: flex;
+  width: 430px;
+  margin-top: 2.77%;
+}
+.form__reserva .form__form--right-inputs .payForm .payment {
+  background-color: yellow;
+  position: relative;
+  width: 430px;
+  cursor: pointer;
+}
+.form__reserva .form__form--right-inputs .pay, .form__reserva .form__form--right-inputs .payment {
+  display: flex;
+  width: 430px;
+}
+.form__reserva .form__row {
+  display: flex;
+}
+.form__reserva .form__row .col {
+  position: relative;
+  font-size: 14px;
+  padding-top: 30px;
+  margin-bottom: 5px;
+}
+.form__reserva .form__row .col .space {
+  margin-left: 15px;
+}
+.form__reserva .form__row .col .width {
+  width: 430px;
+}
+.form__reserva .form__row .col input, .form__reserva .form__row .col textarea {
+  border: 1px solid #ececec;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  border-radius: 3px;
+  width: 300px;
+  outline: none;
+  font-size: 14px;
+  background-color: whitesmoke;
+}
+.form__reserva .form__row .col textarea {
+  width: 615px;
+  height: 150px;
+}
+.form__reserva .form__row .down {
+  padding-top: 15px;
+}
+
+.btn__resetFormReserva, .btn__book {
+  padding: 10px;
+  background-color: black;
+  border: none;
+  border-radius: 3px;
+  width: 213px;
+  outline: none;
+  border: 1px solid white;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+  color: whitesmoke;
+  margin-top: 11%;
+  font-size: 14px;
+}
+
 /* (STARTS) FOOTER */
 footer {
   background-image: linear-gradient(to top, #525252, black);

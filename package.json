@@ -1,11 +1,19 @@
 {
   "name": "entregafinal-05",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rocio-Moroni/CoderHouse-JS-FinalProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rocio-Moroni/CoderHouse-JS-FinalProject/issues"
+  },
+  "homepage": "https://github.com/Rocio-Moroni/CoderHouse-JS-FinalProject#readme",
+  "description": ""
 }

@@ -101,59 +101,63 @@
 
         <!-- Sección "BOOK NOW" empieza (2° Viewport)-->
         <section class="book__container" id="book">
+            <!-- Imagen de fondo -->
+            <div class="book__picture"></div>
             <!-- Borde CSS -->
             <div class="form__container-border">
                 <!-- Fondo blanco CSS -->
                 <div class="form__container-white">
                     <!-- Form: Inputs (izquierdo y derecho)-->
-                    <form id="form__reserva">
+                    <h2 id="form__h2" class="form__h2">Your Reservation</h2>
+                    <form id="form__reserva" class="form__reserva">
                         <!-- Inputs: "Contact Information" (izquierdo) -->
                         <div class="form__form--left-inputs">
                             <h4>Contact Information</h4>
                             <div class="form__row">
                                 <div class="col">
-                                    <label for="name">First Name</label>
+                                    <label for="name">First Name</label><br>
                                     <input type="text" name="" id="form__reserva-firstName" required="">
                                 </div>
                                 <div class="col">
-                                    <label for="name">Last Name</label>
-                                    <input type="text" name="" id="form__reserva-lastName" required="">
+                                    <label for="name" class="space">Last Name</label><br>
+                                    <input type="text" name="" id="form__reserva-lastName" class="space"
+                                    required="">
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="col">
-                                    <label for="phone">Phone</label>
+                                    <label for="phone">Phone</label><br>
                                     <input type="tel" name="" id="form__reserva-phone" required="">
                                 </div>
                                 <div class="col">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="" id="form__reserva-email" required="">
+                                    <label for="email"class="space" >Email</label><br>
+                                    <input type="email" name="" id="form__reserva-email" class="space" required="">
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="col">
-                                    <label for="country">Country</label>
+                                    <label for="country">Country</label><br>
                                     <input type="text" name="" id="form__reserva-country" required="">
                                 </div>
                                 <div class="col">
-                                    <label for="city">City</label>
-                                    <input type="city" name="" id="form__reserva-city" required="">
+                                    <label for="city"class="space" >City</label><br>
+                                    <input type="city" name="" id="form__reserva-city" class="space" required="">
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="col">
-                                    <label for="address">Address</label>
+                                    <label for="address">Address</label><br>
                                     <input type="text" name="" id="form__reserva-address" required="">
                                 </div>
                                 <div class="col">
-                                    <label for="postalCode">Postal Code</label>
-                                    <input type="postalCode" name="" id="form__reserva-postalCode" required="">
+                                    <label for="postalCode"class="space" >Postal Code</label><br>
+                                    <input type="postalCode" name="" id="form__reserva-postalCode" class="space" required="">
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="col">
-                                    <label for="message">Additional details and preferences</label>
-                                    <textarea name="message" id="form__message" cols="30" rows="10"></textarea>
+                                    <label for="message">Additional details and preferences</label><br>
+                                    <textarea name="message" id="form__message"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -161,11 +165,11 @@
                         <div class="form__form--right-inputs">
                             <h4>Payment Information</h4>
                             <div class="form__row">
-                                <div class="col">
-                                    <input type="radio" name="form__payment" id="form__credit" value="credit card" checked>
-                                    <label for="creditCard">Credit Card</label>
-                                    <input type="radio" name="form__payment" id="form__wire" value="wire transfer" checked>
-                                    <label for="wireTransfer">Wire Transfer</label>
+                                <div class="col payForm">
+                                    <input type="radio" name="form__payment" id="form__credit" value="credit card" placeholder="&nbsp" class="payment" checked></input>
+                                    <span for="creditCard" class="placeholder">Credit Card</span><br>
+                                    <input type="radio" name="form__payment" id="form__wire" value="wire transfer" placeholder="&nbsp" class="payment" checked>
+                                    <span for="wireTransfer" class="placeholder wire">Wire Transfer</span>
                                 </div>
                             </div>
                                 <!-- Si se selecciona "Credit Card" se muestra el siguiente Form -->
@@ -181,38 +185,36 @@
                                         </form>
                                     </div>
                                     <div class="form__row">
-                                        <div class="col">
-                                            <label for="cardName">Name on Card</label>
-                                            <input type="text" name="" id="form__cardName" required="">
+                                        <div class="col down">
+                                            <label for="cardName">Name on Card</label><br>
+                                            <input type="text" name="" id="form__cardName" class="width" required="">
                                         </div>
                                     </div>
                                     <div class="form__row">
                                         <div class="col">
-                                            <label for="cardNumber">Card Number</label>
-                                            <input type="text" name="" id="form__cardNumber" required="">
+                                            <label for="cardNumber">Card Number</label><br>
+                                            <input type="text" name="" id="form__cardNumber" class="width" required="">
                                         </div>
                                     </div>
                                     <div class="form__row">
                                         <div class="col">
                                             <label for="cardExpiration">Expiration Date</label>
-                                            <div id="form__cardExpiration">
-                                                <input type="number" placeholder="MM" name="" required="">
-                                                <input type="number" placeholder="YY" name="" required="">
+                                            <div class="pay" id="form__cardExpiration">
+                                                <input type="number" placeholder="MM" name="" required="" class="date">
+                                                <input type="number" placeholder="YY" name="" required="" class="date">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__row">
                                         <div class="col">
-                                            <label for="cardCvv">CVV</label>
-                                            <input type="number" name="" id="form__cardCvv" required="">
+                                            <label for="cardCvv">CVV</label><br>
+                                            <input type="number" name="" id="form__cardCvv" class="width" required="">
                                         </div>
                                     </div>
                                 </div>
                             <div class="buttons">
-                                <div>
-                                    <button id="btn__resetFormReserva" value="Delete data">Delete Data</button>
-                                    <button id="btn__book" class="btn__book">Confirm booking</button>
-                                </div>
+                                <button id="btn__resetFormReserva" class="btn__resetFormReserva" value="Delete data">Delete Data</button>
+                                <button id="btn__book" class="btn__book">Confirm booking</button>
                             </div>
                         </div>
                     </form>
