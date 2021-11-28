@@ -72,7 +72,7 @@ h2{
                         }
                     }
                     .down {
-                        padding-top: 15px;
+                        padding-top: 8px;
                     }
         }
 }
@@ -103,6 +103,13 @@ h2{
     label + input[type=radio] + label {
     border-left: solid 1px rgb(236, 236, 236);
     }
+}
+
+.form__credit {
+    display: flex;
+    justify-content: space-evenly;
+    width: 430px;
+    padding-top: 10px;
 }
 
 // Botón.

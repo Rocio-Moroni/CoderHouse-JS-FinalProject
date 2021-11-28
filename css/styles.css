@@ -375,7 +375,7 @@ h2 {
   height: 150px;
 }
 .form__reserva .form__row .down {
-  padding-top: 15px;
+  padding-top: 8px;
 }
 
 .payForm {
@@ -402,6 +402,13 @@ h2 {
 }
 .payForm label + input[type=radio] + label {
   border-left: solid 1px #ececec;
+}
+
+.form__credit {
+  display: flex;
+  justify-content: space-evenly;
+  width: 430px;
+  padding-top: 10px;
 }
 
 .btn__resetFormReserva, .btn__book {
