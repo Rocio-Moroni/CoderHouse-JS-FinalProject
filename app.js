@@ -201,11 +201,11 @@ const dolarBlueFuncion = () => {
 // Función "formaDePago()" (Dependiendo de si se eligió pagar con tarjeta de crédito o con transferencia bancaria, el valor final de "formaDePago" será la opción elegida por el usuario).
 const formaDePagoFuncion = () => {
 
-    if (form__credit.checked == true) {
-        const formaDePago = document.getElementById("form__credit").value;
+    if (creditCard.checked == true) {
+        const formaDePago = document.getElementById("creditCard").value;
         return formaDePago;
-    } else if (form__wire.checked == true) {
-        const formaDePago = document.getElementById("form__wire").value;
+    } else if (wireTransfer.checked == true) {
+        const formaDePago = document.getElementById("wireTransfer").value;
         return formaDePago;
     }
 };
@@ -244,13 +244,13 @@ const guardarLocalStorageFormReserva = () => {
 // EVENTOS CON JQUERY:
 // Método Shortcut CLICK y animación SHOW:
 // Al escuchar el evento se muestra un nuevo form para realizar el pago con tarjeta de crédito, el cual está oculto desde el html con style = "display: none").
-$("#form__credit").click (() => {
+$("#creditCard").click (() => {
     $(".form__credit-div").show();
 });
 
 // Método Shortcut CLICK y animación HIDE:
 // Si se elige como forma de pago transferencia bancaria, el "form" de tarjeta de crédito se oculta.
-$("#form__wire").click (() => {
+$("#wireTransfer").click (() => {
     $(".form__credit-div").hide();
 });
 

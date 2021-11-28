@@ -164,14 +164,14 @@
                         <!-- Inputs: "Payment Information" (derecho) -->
                         <div class="form__form--right-inputs">
                             <h4>Payment Information</h4>
-                            <div class="form__row">
+                            <form class="form__row">
                                 <div class="col payForm">
-                                    <input type="radio" name="form__payment" id="form__credit" value="credit card" placeholder="&nbsp" class="payment" checked></input>
-                                    <span for="creditCard" class="placeholder">Credit Card</span><br>
-                                    <input type="radio" name="form__payment" id="form__wire" value="wire transfer" placeholder="&nbsp" class="payment" checked>
-                                    <span for="wireTransfer" class="placeholder wire">Wire Transfer</span>
+                                    <input type="radio" id="creditCard" name="form__payment" value="credit card" checked>
+                                    <label for="creditCard">Credit Card</label>
+                                    <input type="radio" id="wireTransfer" name="form__payment" value="wire transfer" checked>
+                                    <label for="wireTransfer">Wire Transfer</label>
                                 </div>
-                            </div>
+                            </form>
                                 <!-- Si se selecciona "Credit Card" se muestra el siguiente Form -->
                                 <div class="form__credit-div" style="display: none;">
                                     <div class="form__credit-cuotas">

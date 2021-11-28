@@ -84,8 +84,8 @@ a:-webkit-any-link {
   transition: 0.7s;
 }
 
-/* FOOTER*/
-/* FOOTER NAVBAR TRANSITION*/
+/* FOOTER */
+/* FOOTER NAVBAR TRANSITION */
 .footer__ul li a:hover {
   background-color: whitesmoke;
   border: 2px solid white;
@@ -106,6 +106,7 @@ a:-webkit-any-link {
   height: 30px;
 }
 
+/* SWITCHER */
 .footer {
   height: 30vh;
   padding-top: 2.5%;
@@ -330,15 +331,14 @@ h2 {
 .form__reserva .form__form--right-inputs .payForm {
   display: flex;
   width: 430px;
-  margin-top: 2.77%;
+  margin-top: 45px;
+  border: solid 1px #ececec;
+  display: flex;
+  border-radius: 2px;
+  overflow: hidden;
+  font-size: 14px;
 }
-.form__reserva .form__form--right-inputs .payForm .payment {
-  background-color: yellow;
-  position: relative;
-  width: 430px;
-  cursor: pointer;
-}
-.form__reserva .form__form--right-inputs .pay, .form__reserva .form__form--right-inputs .payment {
+.form__reserva .form__form--right-inputs .pay {
   display: flex;
   width: 430px;
 }
@@ -376,6 +376,32 @@ h2 {
 }
 .form__reserva .form__row .down {
   padding-top: 15px;
+}
+
+.payForm {
+  /* Seleccionado cambia de color */
+  /* Linea de separacion */
+}
+.payForm input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+.payForm label {
+  color: grey;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+.payForm input[type=radio]:checked + label {
+  color: black;
+  background: #d8d8d8;
+}
+.payForm label + input[type=radio] + label {
+  border-left: solid 1px #ececec;
 }
 
 .btn__resetFormReserva, .btn__book {

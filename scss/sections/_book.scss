@@ -28,15 +28,14 @@ h2{
             .payForm {
                 display: flex;
                 width: 430px;
-                margin-top: 2.77%;
-                    .payment {
-                        background-color: yellow;
-                        position: relative;
-                        width: 430px;
-                        cursor: pointer;
-                    }
+                margin-top: 45px;
+                border: solid 1px rgb(236, 236, 236);
+                display: flex;
+                border-radius: 2px;
+                overflow: hidden;
+                font-size: 14px;
             }
-            .pay, .payment {
+            .pay {
                 display: flex;
                 width: 430px;
             }
@@ -78,21 +77,46 @@ h2{
         }
 }
 
-
-    // Botón.
-    .btn__resetFormReserva, .btn__book {
-        padding: 10px;
-        background-color: black;
-        border: none;
-        border-radius: 3px;
-        width: 213px;
-        outline: none;
-        border: 1px solid white;
-        font-family: 'Quicksand', sans-serif;
-        text-decoration: none;
-        color: whitesmoke;
-        margin-top: 11%;
-        font-size: 14px;
+// Selector de forma de pago.
+// Switcher.
+.payForm {
+    input[type=radio] {
+        position: absolute;
+        visibility: hidden;
+        display: none;
     }
+    label {
+        color: grey;
+        display: inline-block;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 10px;
+        width: 300px;
+        text-align: center;
+    }
+    /* Seleccionado cambia de color */
+    input[type=radio]:checked + label {
+        color: black;
+        background: rgb(216, 216, 216);
+    }
+    /* Linea de separacion */
+    label + input[type=radio] + label {
+    border-left: solid 1px rgb(236, 236, 236);
+    }
+}
 
-
+// Botón.
+.btn__resetFormReserva, .btn__book {
+    padding: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    width: 213px;
+    outline: none;
+    border: 1px solid white;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+    margin-top: 11%;
+    font-size: 14px;
+}
