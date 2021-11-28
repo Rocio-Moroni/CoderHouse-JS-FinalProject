@@ -1,15 +1,15 @@
 // Formulario.
 h2{
     text-align: center;
-    padding-top: 5%;
+    padding-top: 4%;
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 3;
 }
 .form__reserva {
     display: flex;
     justify-content: center;
-    padding-top: 2%;
+    padding-top: 4%;
     h4 {
         font-size: 1.1em;
     }
@@ -126,4 +126,5 @@ h2{
     color: whitesmoke;
     margin-top: 11%;
     font-size: 14px;
+    cursor: pointer;
 }
