@@ -235,6 +235,7 @@ header .navbar .home__navbar-center span p, header .home__navbar-left .home__nav
 header .navbar a, header .home__navbar-left a, header .home__navbar-right a {
   text-decoration: none;
   text-transform: uppercase;
+  color: white;
 }
 header h1 {
   color: white;
